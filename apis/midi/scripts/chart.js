@@ -27,10 +27,10 @@ function renderNotesHistogramChart() {
     document.getElementById('histogramCanvas'),
     chartConfig
   );
-  notesPressTimestamp = {};
 }
 
 function resetHistogram() {
+  notesPressTimestamp = {};
   notesHistogram = getDefaultNotesHistogram();
   renderNotesHistogramChart();
 }

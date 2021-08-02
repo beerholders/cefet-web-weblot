@@ -90,6 +90,7 @@ function handlePianoKeyUp(pianoNote) {
     const keyTimePressed = currentTimestamp - (notesPressTimestamp[pianoNote] ?? currentTimestamp);
     notesHistogram[pianoNote] = notesHistogram[pianoNote] + keyTimePressed;
     pianoNoteElement.classList.remove('active');
+    delete notesPressTimestamp[pianoNote];
     renderNotesHistogramChart();
 }
 
